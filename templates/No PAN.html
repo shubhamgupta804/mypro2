@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO PAN</title>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css'%}">
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="{% url "ifnotpan" %}">
+            {% csrf_token %}
+        <div class="content">
+            <div class="header">
+                <div class="subtitle">Let’s check your CIBIL score</div>
+            </div>
+            <div class="form-input">
+                <div class="input-wrapper">
+                    <input type="text" class="form-field" name="empoyement_type" placeholder="Employment type*" required>
+                    <div class="calendar-icon"></div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="form-field" name="monthly_income" placeholder="Monthly income" required>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="form-field" name="pincode" placeholder="Pin code" required>
+                </div>
+                <div class="terms-text">Your current residential pincode</div>
+            </div>
+            <div class="submit">
+                <button class="next-button" style="padding: 7.5px 152px;">Next</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

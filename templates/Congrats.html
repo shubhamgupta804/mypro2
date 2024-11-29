@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Congrats</title>
+   <style>
+
+/* New header styles */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 11px;
+}
+/* Reused subtitle styles with slight modification */
+.subtitle-sec,
+.subtitle {
+  width: 100%;
+  color: #939393;
+  font-size: 16px;
+  font-weight: 600;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+/* Existing styles for the main container and form container */
+.main-container {
+  width: 1280px;
+  height: 832px;
+  position: relative;
+  background-color: white;
+}
+
+.form-container {
+  height: 190px;
+  padding: 27px 33px;
+  position: absolute;
+  top: 321px;
+  left: 440px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 21px;
+}
+
+/* New container styles */
+.container {
+  width: 1280px;
+  height: 832px;
+  padding: 265.5px 457px 264.5px 440px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* Existing header and subtitle styles */
+.header .subtitle {
+  width: 100%;
+  height: 18px;
+  color: #292524;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* Next button style */
+.next-button {
+  width: 331px;
+  height: 42px;
+  padding: 7.5px 95px;
+  background-color: #064E3B;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.spacing{
+  gap: 14px;
+}
+   </style>
+</head>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+    <div class="container spacing">
+      <img src="/static/imgs/gift-illustration.png" alt="Gift icon" width="140px" />
+      <h2 class="heading">Congratulations!</h2>
+      <p class="subheading">Your CIBIL mix looks good!</p>
+      <p class="subtitle" style="text-align: center;">Get Loan offer upto* ₹ 50,000</p>
+      <h2 class="heading">₹ 50,000</h2>
+      <div class="submit">
+        <button class="next-button" >Next</button>
+    </div>
+    </div>
+  </form>
+  </body>
+</html>

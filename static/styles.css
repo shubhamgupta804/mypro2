@@ -1,0 +1,242 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+/* Existing styles for the main container and form container */
+.main-container {
+  width: 1280px;
+  height: 832px;
+  position: relative;
+  background-color: white;
+}
+
+.form-container {
+  height: 190px;
+  padding: 27px 33px;
+  position: absolute;
+  top: 321px;
+  left: 440px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 21px;
+}
+
+/* New container styles */
+.container {
+  width: 1280px;
+  height: 832px;
+  padding: 265.5px 457px 264.5px 440px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* New content styles */
+.content {
+  width: 383px;
+  padding: 26px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 21px;
+  background-color: white;
+}
+
+/* Existing header and subtitle styles */
+.header .subtitle {
+  width: 100%;
+  height: 18px;
+  color: #292524;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+/* New header styles */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 11px;
+}
+
+.title {
+  width: 100%;
+  height: 61px;
+  color: black;
+  font-style: italic;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Reused subtitle styles with slight modification */
+.subtitle-sec,
+.subtitle {
+  width: 100%;
+  color: #939393;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #929292;
+  /* Adjusted color */
+}
+
+/* New styles for phone input section */
+.phone-input {
+  height: 62px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 5px;
+}
+
+/* Updated input-wrapper and form-field styles for new inputs */
+.input-wrapper {
+  height: 46px;
+  width: 100%;
+  border: 1px solid #D4D4D8;
+  border-radius: 8px;
+  display: flex;
+  justify-content: start;
+  padding: 9px;
+  align-items: center;
+}
+
+.form-field {
+  width: 100%;
+  color: #71717A;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+}
+
+/* New styles for phone input fields */
+.country-code {
+  width: 39px;
+  height: 18px;
+  text-align: center;
+  color: #71717A;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.phone-number {
+  width: 167px;
+  height: 100%;
+  color: #71717A;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+}
+
+/* New styles for OTP notice and terms */
+.otp-notice {
+  width: 100%;
+  height: 11px;
+  color: #71717A;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.terms {
+  width: 100%;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 15px;
+}
+
+/* Checkbox wrapper and styles */
+.checkbox-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkbox {
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+/* Terms text style */
+.terms-text {
+  color: #6c6c6e;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+/* Next button style */
+.next-button {
+  width: max-content;
+  height: 42px;
+  padding: 7.5px 81px;
+  background-color: #064E3B;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* Screen 2 specific styles */
+.form-input {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 5px;
+}
+
+/* Name input styles */
+.name-inputs {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Screen 3 specific styles */
+.calendar-icon {
+  width: 26px;
+  height: 25px;
+  background-color: transparent;
+}
+
+
+.spacing {
+  gap: 14px;
+}

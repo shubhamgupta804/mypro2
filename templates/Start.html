@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start
+    </title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css'%}"> 
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="{% url "savephone" %}">
+           
+            {% csrf_token %}
+        <div class="content">
+        
+            <div class="">
+                <div class="title">Get up to ₹50,000 in 10 mins!</div>
+                <div class="subtitle-sec">Instant Personal Loan made just for you</div>
+            </div>
+            
+            <div class="phone-input">
+                <div class="input-wrapper">
+                    <div class="country-code">+91</div>
+                    <input type="text" class="phone-number" name="phone" placeholder="Enter your number" required>
+                </div>
+                <div class="otp-notice">An otp will be sent for verification</div>
+            </div>
+            <div class="terms">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox" required>
+                    <div class="terms-text">by proceeding, you agree to our terms & conditions & privacy policy</div>
+                </div>
+                <button class="next-button" type="submit" style="padding: 7.5px 152px;">Next</button>
+            </div>
+        
+        </div>
+    </form>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>

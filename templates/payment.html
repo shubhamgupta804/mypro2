@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Summary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+        }
+        .container {
+            width: 383px;
+            padding: 26px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            margin-bottom: 21px;
+            font-size: 1.125rem; /* 18px */
+            font-weight: 600;
+            color: #1d1d1d;
+        }
+        .summary {
+            margin-bottom: 21px;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.875rem; /* 14px */
+        }
+        .item:last-child {
+            margin-bottom: 0;
+        }
+        .item .description {
+            color: #898989;
+            font-weight: 400;
+        }
+        .item .amount {
+            color: #1d1d1d;
+            font-weight: 500;
+        }
+        .item.total .description {
+            color: #2f2e41;
+        }
+        .border-bottom {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+        .next-button {
+            width: max-content;
+            height: 42px;
+            padding: 7.5px 81px;
+            background-color: #064E3B;
+            border-radius: 8px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+          }
+    </style>
+</head>
+<body>
+    <form method="post" action="{% url "testupi" %}">
+        {% csrf_token %}
+    <div class="container">
+        <div class="title">Payment Summary</div>
+        <div class="summary">
+            <div class="item">
+                <div class="description">Processing fee</div>
+                <div class="amount">₹ 81.18</div>
+            </div>
+            <div class="item border-bottom">
+                <div class="description">GST (@18%)</div>
+                <div class="amount">₹ 17.82</div>
+            </div>
+            <div class="item total">
+                <div class="description">Total amount</div>
+                <div class="amount">₹ 99</div>
+            </div>
+        </div>
+         
+       
+        <div class="submit">
+            <button class="next-button" style="padding: 7.5px 149px;" >Pay with UPI </button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
